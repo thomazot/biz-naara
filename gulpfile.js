@@ -2,20 +2,17 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     stylus = require('gulp-stylus'),
     svgmin = require('gulp-svgmin'),
-    gulpif = require('gulp-if'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     pxtorem = require('postcss-pxtorem'),
     browserSync = require('browser-sync').create(),
     path = require('path'),
-    backstop = require('backstopjs'),
-    url = require('url'),
     concat = require('gulp-concat'),
     path = require('path')
 
 var config = require('./skin')
 var { rootValue, unitPrecision } = config.pxtorem
-var { protocol, host, theme } = config
+var { protocol, host } = config
 
 var processors = [
     autoprefixer({

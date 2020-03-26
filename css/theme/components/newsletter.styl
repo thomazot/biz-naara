@@ -1,0 +1,92 @@
+.newsletter
+    --newsletter-color-placeholder: #aeadad
+
+    div&
+        margin-top: -16px
+        background: var(--primary)
+
+    .input-text
+        font-size: 10px
+
+        &::placeholder
+            color: var(--newsletter-color-placeholder)
+
+    &__form
+        container()
+
+    &__text.std
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        color: var(--primary-contrast)
+        font-weight: light
+
+        .ico
+            flex: 0 0 50px
+            margin-right: 20px
+            width: 50px
+            height: 29px
+            color: var(--secundary)
+
+        @media desktop
+            flex: 0 1 600px
+            margin-bottom: 0
+            font-size: 16px
+
+        @media mobile
+            font-size: 12px
+
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        height: 36px
+        background: var(--secundary)
+        font-weight: medium
+        font-size: 12px
+
+    &__submit
+        @media desktop
+            flex: 0 1 123px
+            padding-bottom: 0
+
+        @media mobile
+            position: relative
+            z-index: 2
+            flex: 1 1 120px
+            margin-left: -5px
+            padding-right: 0
+            padding-left: 0
+            min-width: 0
+
+    &__email, &__name
+        @media desktop
+            flex: 1 1 215px
+            padding: 0 8px
+            min-width: 0
+
+        @media mobile
+            padding-right: 0
+            padding-left: 0
+
+    &__name
+        @media mobile
+            flex: 0 0 100%
+            padding-bottom: 15px
+
+    &__email
+        @media mobile
+            flex: 1 1 160px
+            padding-right: 0
+            min-width: 0
+            border-radius: 2px 0 0 2px
+
+    &__form
+        @media desktop
+            flex-wrap: nowrap
+            padding: 40px 0
+
+        @media mobile
+            display: flex
+            padding: 20px 4px

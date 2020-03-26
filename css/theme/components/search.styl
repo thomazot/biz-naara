@@ -1,2 +1,54 @@
 .search
-    display: none
+    --bg: #f2f2f2
+    --color: #aeadad
+
+    .header &
+        @media (min-width: 993px)
+            margin-left: 50px
+
+        @media (max-width: 992px)
+            position: absolute
+            top: calc(100% - 1px)
+            left: 0
+            visibility: visible
+            width: 100%
+            background: var(--bg)
+            opacity: 1
+            transition: all .2s linear
+
+            [data-scrolling-down=true] &
+                visibility: hidden
+                max-height: 0
+                opacity: 0
+
+    &__input[type=search]
+        border-radius: 2px 0 0 2px
+        background: var(--bg)
+        font-weight: medium
+        font-size: 10px
+
+        &::placeholder
+            color: var(--color)
+
+        &:focus::placeholder
+            color: transparent
+
+        @media (max-width: 992px)
+            border-radius: 0
+
+    &__button
+        padding: 0 10px
+        height: 36px
+        background: var(--bg)
+        box-shadow: none
+        color: var(--secundary)
+        letter-spacing: 1px
+        font-weight: bold
+        font-size: 10px
+
+        &:hover
+            background: var(--bg)
+            color: var(--primary)
+
+        @media (max-width: 992px)
+            border-radius: 0

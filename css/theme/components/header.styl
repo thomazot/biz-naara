@@ -1,4 +1,25 @@
 .header
+    @media (max-width: 992px)
+        position: static
+        margin-bottom: 0 !important
+        padding: 6px 16px
+
+    @media (min-width: 993px)
+        z-index: 20
+        padding-top: 0
+        padding-bottom: 25px
+        height: 90px
+        background: #fff
+        box-shadow: 300px 0 0 #fff, -300px 0 0 #fff
+        transition: all .2s linear
+
+        [data-scrolling=true] &
+            padding-bottom: 0
+            max-height: 65px
+
     &-container
         position: sticky
         top: 0
+
+        @media (max-width: 992px)
+            background: #fff

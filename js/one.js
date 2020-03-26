@@ -855,7 +855,10 @@ function default_categories_carrossel() {
     if (menu.find('.li--0').length > 0) {
         menu.find('.ul--0').owlCarousel({
             navigation: true,
-            navigationText: ['?', '?'],
+            navigationText: [
+                '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+            ],
             pagination: false,
             afterInit: function() {
                 menu.addClass('loaded')
@@ -897,14 +900,17 @@ function default_carrossel_produtos() {
 
                 $j(el).owlCarousel({
                     navigation: true,
-                    navigationText: ['?', '?'],
+                    navigationText: [
+                        '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                        '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+                    ],
                     items: 5,
                     itemsCustom: [
                         [0, 1],
                         [568, 2],
                         [768, 3],
                         [1024, 4],
-                        [1270, 5],
+                        [1270, 4],
                     ],
                     beforeMove: function() {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -992,7 +998,11 @@ function default_carrossel_brands() {
             $j(el).owlCarousel({
                 itemsScaleUp: true,
                 navigation: true,
-                navigationText: ['?', '?'],
+                // items: 7,
+                navigationText: [
+                    '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                    '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+                ],
                 pagination: false,
             })
         })
@@ -1011,7 +1021,10 @@ function default_carrossel_jointsales() {
                 singleItem: true,
                 itemScaleUp: true,
                 navigation: true,
-                navigationText: ['?', '?'],
+                navigationText: [
+                    '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                    '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+                ],
                 autoHeight: true,
                 beforeMove: function() {
                     if (typeof $j.fn.lazyload != 'undefined') {
@@ -1347,6 +1360,18 @@ $j.fn.neonTheme.custom = {
             mode: 'prepend',
             ratio: false,
         },
+        'z-prev': {
+            selector: '.owl-prev',
+            mode: 'html',
+        },
+        'z-next': {
+            selector: '.owl-next',
+            mode: 'html',
+        },
+        'z-cart': {
+            selector: '.products__actions .button',
+            mode: 'prepend',
+        },
     },
 }
 
@@ -1421,21 +1446,26 @@ function scrollTop() {
     $j(window).scroll(function() {
         var body = $j('body')
         var scrollTop = $j(window).scrollTop()
-        var heightHeader = $j('.header-container').outerHeight()
 
-        if (scrollTop > 0) body.addClass('scrolling')
-        else body.removeClass('scrolling')
-
-        if (scrollTop > heightHeader) {
-            if (scrollTop > currentScrolling) {
-                body.addClass('scrolling--down').removeClass('scrolling--up')
-            } else {
-                body.addClass('scrolling--up').removeClass('scrolling--down')
-            }
-            currentScrolling = scrollTop
+        if (scrollTop > currentScrolling) {
+            body.attr('data-scrolling-down', true).attr(
+                'data-scrolling-up',
+                false
+            )
         } else {
-            body.removeClass('scrolling--up').removeClass('scrolling--down')
+            body.attr('data-scrolling-down', false).attr(
+                'data-scrolling-up',
+                true
+            )
         }
+
+        if (scrollTop > 0) body.attr('data-scrolling', true)
+        else
+            body.attr('data-scrolling', false)
+                .attr('data-scrolling-up', false)
+                .attr('data-scrolling-down', false)
+
+        currentScrolling = scrollTop
     })
 }
 

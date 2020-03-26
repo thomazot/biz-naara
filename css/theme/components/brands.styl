@@ -1,0 +1,42 @@
+.brands
+    --brands-border-color: #ecedf2
+
+    &
+        overflow: hidden
+        padding-bottom: 20px
+        width: 100%
+        border-bottom: solid 1px var(--brands-border-color)
+
+    &:before
+        display: block
+        padding: 15px 0
+        color: var(--secundary-hover)
+        content: 'Compre por marca'
+        text-align: center
+        font-weight: bold
+        font-size: 18px
+
+    .owl-wrapper-outer
+        border: 0
+
+    &__list
+        container()
+
+        margin: 0 auto
+
+        a
+            border: 0
+
+    &__item
+        display: block
+        width: 100px
+
+        img
+            filter: grayscale(1)
+            opacity: .5
+            transition: all .2s ease
+
+        &:hover img
+            filter: grayscale(0)
+            opacity: 1
+            transform: scale(1.2)

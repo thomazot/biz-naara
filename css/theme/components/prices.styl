@@ -1,0 +1,61 @@
+.price-box
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    .old-price
+        margin-bottom: 0
+
+        .label, .price
+            span
+                color: var(--tertiary)
+                font-weight: regular
+                font-size: 14px
+
+        + .special-price
+            margin-left: 5px
+
+    .regular-price, .special-price, .minimal-price
+        .label, .price
+            display: inline
+
+            span
+                color: var(--tertiary)
+                font-weight: regular
+                font-size: 20px
+
+.price-box-parcelado
+    .preco-parcelado-sem-juros
+        .upto, .s-juros
+            display: none
+
+        &, .num, .de, .value
+            &, span
+                color: var(--tertiary)
+                font-weight: regular
+                font-size: 14px
+
+        &:before
+            content: 'ou'
+
+        &:after
+            content: 'no cartão'
+
+    .preco-parcelado
+        display: none
+
+.price-box-avista
+    display: block
+
+    .label
+        display: none
+
+    .products__item &, .price span
+        color: var(--tertiary)
+        font-size: 12px
+
+    &:before
+        content: 'ou'
+
+    &:after
+        content: 'com desconto à vista no boleto'

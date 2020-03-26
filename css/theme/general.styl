@@ -3,20 +3,19 @@
  * Mixins
  */
 icon(i)
+    content: i
+    text-transform: none
+    font-weight: normal
+    font-style: normal
+    font-variant: normal
     font-family: 'biz_icons'
     speak: none
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
-    content: i
 
 /**
  * Mixin - Font-weight
  */
-font = 'Mukta', sans-serif
 light = 300
 regular = 400
 medium = 500
@@ -25,8 +24,10 @@ bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 980px
-gap = 32px
+viewport = 1180px
+desktop = unquote('(min-width: 993px)')
+mobile = unquote('(max-width: 992px)')
+gap = 20px
 /**
  * Mixin - Responsive
  * @media (max-width screen-sm-min)
@@ -44,7 +45,7 @@ screen-md = 992px
 screen-lg = 1200px
 
 container()
-    width: viewport
-    max-width: 'calc(100% - %s)' % gap
-    margin-left: auto
     margin-right: auto
+    margin-left: auto
+    max-width: 'calc(100% - %s)' % gap
+    width: viewport

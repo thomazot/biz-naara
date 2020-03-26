@@ -1,4 +1,13 @@
 .logo
     .header &
         img, svg
-            height: 48px
+            margin: 0 auto
+            width: 147px
+            height: 25px
+
+            + svg
+                display: none
+
+        @media (max-width: 992px)
+            flex: 1
+            min-width: 0
