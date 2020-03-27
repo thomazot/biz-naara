@@ -1,0 +1,23 @@
+.breadcrumb
+    &__home &__link
+        &:before
+            display: none
+
+    &__link
+        color: var(--tertiary)
+        text-transform: uppercase
+        font-weight: regular
+        font-size: 13px
+
+    &__sep
+        margin: 0
+
+    &__last
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 13px
+
+    &__list
+        @media mobile
+            justify-content: center

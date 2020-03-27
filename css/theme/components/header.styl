@@ -1,10 +1,10 @@
 .header
-    @media (max-width: 992px)
+    @media mobile
         position: static
         margin-bottom: 0 !important
         padding: 6px 16px
 
-    @media (min-width: 993px)
+    @media desktop
         z-index: 20
         padding-top: 0
         padding-bottom: 25px
@@ -20,6 +20,10 @@
     &-container
         position: sticky
         top: 0
+        margin-bottom: 40px !important
 
-        @media (max-width: 992px)
+        @media mobile
             background: #fff
+
+            .up &
+                transform: translateY(-115px)

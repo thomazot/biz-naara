@@ -1,0 +1,47 @@
+.category
+    &-description
+        --category-border-color: #ecedf2
+
+        &
+            border-color: var(--category-border-color)
+            color: var(--tertiary)
+            font-size: 14px
+
+    &-image
+        margin-top: -40px
+
+        img
+            width: 100%
+            object-fit: cover
+
+        .col-main > &
+            display: none
+
+    &-title
+        display: flex
+        align-items: center
+
+        h1
+            margin-bottom: 0
+            color: var(--secundary)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 16px
+
+        @media mobile
+            flex: 0 0 100%
+            justify-content: center
+            padding: 20px 0
+
+.catalog-category-view, .catalogsearch-result-index
+    main.col-main
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        aling-items: center
+
+    .category__products
+        flex: 0 0 100%
+
+.ias-noneleft
+    display: none !important

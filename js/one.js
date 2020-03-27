@@ -1153,19 +1153,9 @@ function is468() {
  */
 function hideHeader(status) {
     if (status) {
-        $j('.header-container').animate(
-            {
-                top: '-' + $j('.header-container').outerHeight() + 'px',
-            },
-            200
-        )
+        $j('body').addClass('up')
     } else {
-        $j('.header-container').animate(
-            {
-                top: '0px',
-            },
-            200
-        )
+        $j('body').removeClass('up')
     }
     return false
 }
@@ -1468,12 +1458,34 @@ function scrollTop() {
         currentScrolling = scrollTop
     })
 }
+function categoryChange() {
+    var header = $j('.header-container')
+    var banner = $j('.category-image')
 
+    if (banner.length) {
+        header.after(banner)
+    }
+}
+function filters() {
+    var categories = $j(
+        '.catalog-category-view .breadcrumb, .catalogsearch-result-index .breadcrumb'
+    )
+    if (categories.length) {
+        var button = $j(
+            '<button class="filters__show" type="button">Aplicar Filtros</button>'
+        )
+        categories.after(button)
+        button.click(function() {
+            $j('.filters > .title').trigger('click')
+        })
+    }
+}
 $j(document)
     .ready(function($) {
         // document.ready
         // Scrolling
         scrollTop()
+        categoryChange()
 
         // Menu Categories
         $('.categories .parent').click(function(event) {
@@ -1481,6 +1493,7 @@ $j(document)
                 $(event.target).toggleClass('on')
             }
         })
+        filters()
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
