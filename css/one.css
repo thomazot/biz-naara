@@ -13261,6 +13261,15 @@ div.newsletter {
   display: none !important;
 }
 
+@media (max-width: 992px) {
+  .opc .header-container {
+    margin: 0;
+    padding: 0.63rem 0;
+    background: #fff;
+    box-shadow: none;
+  }
+}
+
 .prod__name h1 {
   margin-bottom: 0;
   padding-bottom: 0.31rem;
