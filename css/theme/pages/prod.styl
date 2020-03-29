@@ -1,0 +1,84 @@
+.prod
+    &__name
+        h1
+            margin-bottom: 0
+            padding-bottom: 5px
+            color: var(--secundary)
+            font-weight: semibold
+            font-size: 24px
+            line-height: 1.3
+
+    &__brand-sku
+        display: flex
+        margin-bottom: 20px
+
+        .brand
+            padding-top: 0
+
+            .thumb
+                display: none
+
+            a
+                display: block
+                color: var(--tertiary)
+                font-weight: regular
+                font-size: 12px
+                opacity: 1
+
+                &:before
+                    content: 'Marca: '
+
+                &:after
+                    content: attr(title)
+
+            + .sku
+                margin-left: 20px
+
+        .sku
+            color: var(--tertiary)
+            font-weight: regular
+            font-size: 12px
+
+    &__short-description
+        margin-bottom: 20px
+        color: var(--tertiary)
+        font-weight: regular
+        font-size: 14px
+        line-height: 1.3
+
+    &__img
+        @media (max-width: 568px)
+            display: contents
+
+        @media desktop
+            flex: 0 1 60%
+
+    &__shop
+        @media (max-width: 568px)
+            display: contents
+
+        .add-to-cart
+            margin-bottom: 0
+
+        .add-to-cart-btn
+            padding: 0
+            height: 58px
+            border-radius: 0
+            background: var(--primary)
+            font-weight: bold
+            font-size: 16px
+
+            @media (max-width: 568px)
+                box-shadow: 300px 0 0 var(--primary), -300px 0 0 var(--primary)
+
+            @media desktop
+                padding-left: 90px
+                max-width: 100%
+                width: 360px
+                border-radius: 4px
+
+            .ico
+                margin-right: 5px
+                width: 10px
+                height: 15px
+                fill: var(--secundary)

@@ -1,0 +1,29 @@
+.product-image
+    @media desktop
+        flex: 1
+        min-width: 0
+
+    &-container
+        @media desktop
+            display: flex
+
+            .more-views
+                order: -1
+
+    &-gallery
+        margin: 0
+        box-shadow: none
+
+    &-thumbs
+        justify-content: center
+
+        @media desktop
+            display: block
+
+        .thumb-link
+            box-shadow: none
+            opacity: .5
+
+            &:hover, &.on
+                box-shadow: none
+                opacity: 1

@@ -1,0 +1,45 @@
+.configurable
+    margin-bottom: 0
+
+    &:before
+        display: none
+
+    &__caption
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+
+    .configurable-swatch-list
+        img
+            width: 30px
+            height: 30px
+            object-fit: cover
+
+        a
+            position: relative
+            min-width: 0
+            color: var(--tertiary)
+            font-weight: regular
+            font-size: 12px
+            line-height: 30px
+
+            &:not(.has-image)
+                padding: 0 15px
+
+        .not-available .swatch-label
+            opacity: 1
+
+        .selected a
+            position: relative
+            background: #ecedf2
+            box-shadow: none
+
+            &.has-image:before
+                position: absolute
+                top: 50%
+                left: 50%
+                height: 12px
+                content: url(check)
+                line-height: 1
+                transform: translateX(-50%) translateY(-50%)

@@ -98,12 +98,6 @@
          * addSVG() - defaults
          */
         if (neon.default_SVGs !== false) {
-            var truck = {
-                'img-truck': {
-                    selector: '.frete__title',
-                    mode: 'append',
-                },
-            }
             var svgs = {
                 'img-truck': {
                     selector:
@@ -158,7 +152,6 @@
             }
             $j(document).ready(function() {
                 addSVG(svgs)
-                addSVG(truck)
             })
         }
         if (neon.addSVG !== false) {
@@ -1336,9 +1329,9 @@ $j.fn.neonTheme.custom = {
     m_myaccount: true, // ativa o responsivo da Minha Conta
     m_mycart: true, // ativa o responsivo do Meu Carrinho
     m_parcelamento: true, // ativa o responsivo do parcelamento na página de produto
-    m_frete: true, // ativa o responsivo do cálculo de frete na página do produto
-    m_produto: true, // ativa o responsivo de cada bloco da página de produto
-    m_tabs: true, // ativa o responsivo do componente .tabs do tema
+    m_frete: false, // ativa o responsivo do cálculo de frete na página do produto
+    m_produto: false, // ativa o responsivo de cada bloco da página de produto
+    m_tabs: false, // ativa o responsivo do componente .tabs do tema
     m_painelCliente: true, // ativa o responsivo do Menu do Painel de Cliente
     /**
      * Funcionalidades do Tema
@@ -1359,7 +1352,16 @@ $j.fn.neonTheme.custom = {
             mode: 'html',
         },
         'z-cart': {
-            selector: '.products__actions .button',
+            selector:
+                '.products__actions .button, .prod__shop .add-to-cart-btn > span',
+            mode: 'prepend',
+        },
+        'z-heart': {
+            selector: '.add-to-links .link-wishlist a',
+            mode: 'prepend',
+        },
+        'z-truck': {
+            selector: '.frete__title',
             mode: 'prepend',
         },
     },

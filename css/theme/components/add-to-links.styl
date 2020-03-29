@@ -1,0 +1,23 @@
+.add-to-links
+    li:not(.link-wishlist)
+        display: none
+
+    .link-wishlist
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0
+            padding: 10px 0
+            color: var(--secundary)
+            font-weight: regular
+            font-size: 11px
+
+            @media (min-width: 569px)
+                justify-content: flex-start
+
+            .ico
+                margin-right: 8px
+                width: 21px
+                height: 18px
+                color: var(--primary)

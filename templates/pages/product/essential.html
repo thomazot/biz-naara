@@ -1,0 +1,42 @@
+<div class="prod__img">
+    @fotos
+    @compartilhar
+    @selos
+</div>
+<div class="prod__shop">	
+    <div class="col">
+        <div class="prod__name">
+            <h1>@nome</h1>
+            <div class="prod__brand-sku">
+                @marca
+                <small class="sku">SKU: @atributo(sku)</small>
+            </div>
+        </div>
+        
+        <div class="prod__short-description">
+            @descricao(curta)
+        </div>
+
+        @variacoes
+
+        @if(is_disponivel)
+
+			<div class="prod__prices">
+                @preco
+                @preco(parcelado)
+                @preco(avista)
+            </div>
+
+            @bt(comprar)
+            @links
+            @simulador-frete
+
+        @else(is_disponivel)		
+			<div class="prod__esgotado">
+				<div class="title title--sm">Produto Esgotado</div>
+				@alertas
+			</div>
+		@endif(is_disponivel)
+    </div>
+	
+</div>

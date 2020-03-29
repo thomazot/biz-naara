@@ -1,0 +1,86 @@
+.frete
+    --frete-bg: #f2f2f2
+
+    @media desktop
+        display: flex
+        flex-flow: row wrap
+        margin-top: 10px
+        max-width: 375px
+
+    &__title
+        margin: 0
+        box-shadow: none
+        color: var(--primary)
+        font-weight: regular
+        font-size: 11px
+
+        @media desktop
+            flex: 0 0 135px
+            padding-left: 0
+            height: 48px
+
+        > span
+            display: none
+
+        &:after
+            content: 'Calcule o Frete'
+
+        .ico
+            width: 24px
+            height: 19px
+            color: var(--secundary)
+
+    &__content
+        @media desktop
+            flex: 1
+            min-width: 0
+
+    &__results
+        @media desktop
+            flex: 0 0 100%
+
+    &__form
+        position: relative
+        margin: 0 auto
+        max-width: 100%
+        width: 240px
+        border-radius: 5px
+        background: var(--frete-bg)
+
+        label
+            display: none
+
+        .input-box
+            width: 100%
+
+        .input-text
+            padding-right: 90px
+            width: 100%
+            height: 48px
+            background: none
+
+    &__actions
+        position: absolute
+        top: 0
+        right: 0
+
+        .btn
+            padding: 0 15px
+            height: 48px
+            background: none
+            box-shadow: none
+            color: var(--secundary)
+            font-weight: bold
+            font-size: 13px
+
+            span
+                display: none
+
+            &:before
+                content: 'Calcular'
+
+    &__naosei
+        color: var(--primary)
+        text-align: center
+        font-weight: medium
+        font-size: 11px

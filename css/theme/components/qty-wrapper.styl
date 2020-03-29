@@ -1,0 +1,91 @@
+.qty-wrapper
+    --qty-wrapper-bg: #ecedf2
+    --qty-wrapper-color: #a6a2b3
+
+    .prod__shop &
+        position: static
+        display: flex !important
+        justify-content: center
+        align-items: center
+        margin: 0
+
+        @media (max-width: 568px)
+            box-shadow: 300px 0 0 var(--qty-wrapper-bg), -300px 0 0 var(--qty-wrapper-bg)
+
+        @media mobile
+            background: var(--qty-wrapper-bg)
+            transform: none
+
+        @media desktop
+            position: absolute
+            padding-top: 8px
+            width: 70px
+            border-radius: 4px
+            background: #fff
+
+        &:before
+            color: var(--tertiary)
+            font-weight: semibold
+
+            @media mobile
+                margin-right: 15px
+                content: 'Quantidade'
+                text-transform: uppercase
+                font-size: 11px
+
+            @media desktop
+                position: absolute
+                top: 4px
+                left: 0
+                width: 100%
+                content: 'Qtde.'
+                text-align: center
+                font-size: 8px
+
+        .input-box
+            position: relative
+            padding: 0 20px
+            width: 60px
+
+        .input-text
+            width: 100%
+            border: 0
+            background: none
+            box-shadow: none
+            color: var(--tertiary)
+            font-weight: semibold
+            font-size: 16px
+
+        .bt-box
+            position: static
+            border-radius: 0
+            transform: none
+
+        .plus, .less
+            position: absolute
+            top: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 20px
+            height: 100%
+            border-radius: 0
+            background: none
+            color: var(--qty-wrapper-color)
+            text-indent: 0
+            font-weight: semibold
+            font-size: 16px
+            transform: translateY(-50%)
+
+            span
+                display: inline-block
+                vertical-align: middle
+
+            &:before
+                display: none
+
+        .plus
+            right: 0
+
+        .less
+            left: 0

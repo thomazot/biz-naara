@@ -24,7 +24,32 @@
                 font-weight: regular
                 font-size: 20px
 
+    .prod__prices &
+        display: block
+        margin-bottom: 0
+
+        .old-price
+            line-height: 1.6
+
+            + .special-price
+                margin-left: 0
+
+            .label, .price
+                span
+                    font-size: 16px
+
+        .regular-price, .special-price
+            .label, .price
+                span
+                    color: var(--secundary)
+                    font-weight: semibold
+                    font-size: 22px
+
 .price-box-parcelado
+    .prod__prices &
+        margin-bottom: 0
+        line-height: 22px
+
     .preco-parcelado-sem-juros
         .upto, .s-juros
             display: none
@@ -34,6 +59,9 @@
                 color: var(--tertiary)
                 font-weight: regular
                 font-size: 14px
+
+                .prod__prices &
+                    font-size: 15px
 
         &:before
             content: 'ou'
@@ -53,6 +81,14 @@
     .products__item &, .price span
         color: var(--tertiary)
         font-size: 12px
+
+    .prod__prices &
+        &
+            color: var(--tertiary)
+            font-size: 12px
+
+        .price span
+            color: var(--secundary)
 
     &:before
         content: 'ou'
