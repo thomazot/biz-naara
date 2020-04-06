@@ -52,12 +52,9 @@
             background: none
             color: var(--tertiary)
 
-    @media (max-width: 992px)
+    @media mobile
         .parent
             position: relative
-
-            > ul
-                display: none
 
             &:after
                 content: ''
@@ -68,34 +65,45 @@
                 align-items: center
                 min-height: 48px
 
-            &:after
-                icon('\f054')
-
-                position: absolute
-                top: 0
-                right: 0
-                z-index: 10
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 48px
-                height: 48px
-                background: rgba(255, 255, 255, .1)
-                color: var(--secundary-contrast)
-                font-size: 20px
-                transition: all .2s ease
-
-            &.on
-                &:after
-                    transform: rotate(90deg)
-
-                > ul
-                    display: block
-
         .all-li--0
             padding-bottom: 0
 
-    @media (min-width: 993px)
+        &__all
+            .box--1
+                &:before
+                    display: block
+                    margin-bottom: 10px
+                    padding: 10px 16px
+                    color: var(--primary-contrast)
+                    content: 'todas as categorias'
+                    text-transform: uppercase
+                    font-weight: bold
+                    font-size: 12px
+
+        &--mobi
+            .all-li--0:first-child
+                background: rgba(0, 0, 0, .1)
+
+                .all-a--0
+                    color: var(--secundary)
+
+            .all-li--0, .all-li--1
+                box-shadow: none
+
+            .all-a--0
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 12px
+
+            .all-a--1
+                text-transform: uppercase
+                font-weight: regular
+                font-size: 12px
+
+            .all-ul--1
+                background: none
+
+    @media desktop
         position: absolute
         top: 65px
         left: 0
@@ -105,6 +113,9 @@
         min-width: 0
         width: 100%
         background: none
+
+        .loginout, .mymenu
+            display: none
 
         [data-scrolling=true] &
             top: 15px
