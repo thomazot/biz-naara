@@ -822,8 +822,8 @@ function default_carrossel_produtos() {
                         [0, 1],
                         [568, 2],
                         [768, 3],
-                        [1024, 4],
-                        [1270, 4],
+                        [1024, 3],
+                        [1270, 3],
                     ],
                     beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -1255,11 +1255,6 @@ $j.fn.neonTheme.custom = {
             selector: '.owl-next',
             mode: 'html',
         },
-        'z-cart': {
-            selector:
-                '.products__actions .button, .prod__shop .add-to-cart-btn > span',
-            mode: 'prepend',
-        },
         'z-heart': {
             selector: '.add-to-links .link-wishlist a',
             mode: 'prepend',
@@ -1406,6 +1401,38 @@ $j(document)
         })
         filters()
         menu()
+
+        var questions = $('.questions__list')
+        if (questions.length) {
+            questions.owlCarousel({
+                singleItem: true,
+                itemScaleUp: true,
+                autoPlay: 3000,
+                navigation: true,
+                navigationText: [
+                    '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                    '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+                ],
+                pagination: false,
+            })
+        }
+
+        var menuButton = $('<button class="menu-button"></button>')
+        var header = $('.header-container .header')
+
+        menuButton.click(function () {
+            $('body').toggleClass('menu-show')
+        })
+
+        if (header.find('.mymenu')) {
+            header.prepend(menuButton)
+
+            $('.mymenu').click(function (event) {
+                if (event.target.classList.contains('mymenu')) {
+                    $('body').removeClass('menu-show')
+                }
+            })
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize

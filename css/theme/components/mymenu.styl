@@ -1,20 +1,75 @@
 .mymenu
     .header &
-        margin-left: 50px
+        @media mobile
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 100
+            visibility: hidden
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.5)
+            opacity: 0
+            transition: all 0.2s ease-in-out
 
-        @media (max-width: 992px)
-            display: none
+            &:after
+                position: absolute
+                top: 0
+                left: 300px
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 50px
+                height: 50px
+                color: #fff
+                content: '+'
+                font-weight: regular
+                font-size: 40px
+                transform: rotate(45deg)
 
-        .li--0, .a--0
-            line-height: 1
+            .menu-show &
+                visibility: visible
+                opacity: 1
+
+            .ul--0
+                position: relative
+                padding: 20px
+                max-width: calc(100% - 60px)
+                width: 300px
+                height: 100%
+                background: #fff
+                transition: all 0.4s ease
+                transform: translateX(-100%)
+
+                .menu-show &
+                    transform: translate(0)
+
+        @media (max-width: 370px)
+            &:after
+                right: 10px
+                left: auto
 
         .a--0
-            color: var(--tertiary)
-            font-weight: regular
+            padding: 8px 20px
+            border-radius: 30px
+            color: var(--secundary)
+            text-transform: uppercase
+            font-weight: medium
             font-size: 12px
+            line-height: 1
 
-            &:hover
-                color: var(--secundary)
+            @media desktop
+                &:hover
+                    color: var(--primary)
+
+        .light
+            a
+                border: solid 2px var(--primary)
+                color: var(--primary)
+
+                &:hover
+                    background: var(--primary)
+                    color: var(--primary-contrast)
 
     .categories &
         .li--0, .a--0
@@ -27,7 +82,7 @@
 
     .footer &
         .a--0
-            color: var(--primary-contrast)
+            color: #303030
             text-transform: uppercase
             font-weight: regular
             font-size: 12px
@@ -35,6 +90,35 @@
         .li--0
             margin-bottom: 0
 
-#footer-categorias
-    .ul--0
-        column-count: 2
+            &.light
+                padding-top: 30px
+
+                .a--0
+                    padding: 10px 25px
+                    border-radius: 35px
+                    background: var(--primary)
+                    color: var(--primary-contrast)
+                    text-transform: uppercase
+                    font-size: 14px
+
+.menu-button
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0
+    width: 50px
+    height: 50px
+    background: none
+    box-shadow: none
+    color: var(--primary)
+    font-size: 20px
+
+    @media desktop
+        display: none
+
+    &:before
+        icon('\f0c9')
+
+    &:hover
+        background: none
+        color: var(--primary)

@@ -1,0 +1,67 @@
+.questions
+    padding-bottom: 50px
+    background: var(--primary)
+    box-shadow: 300px 0 0 var(--primary), -300px 0 0 var(--primary)
+    color: var(--primary-contrast)
+    text-align: center
+
+    .owl-prev, .owl-next
+        z-index: 100
+        border: solid 1px #fff
+        border-radius: 50%
+        color: #fff
+        opacity: 1
+
+        svg
+            fill: currentColor
+
+        @media mobile
+            display: none
+
+    &__container
+        margin: 0 auto
+        max-width: calc(100% - 36px)
+        width: viewport
+
+    @media desktop
+        box-shadow: 800px 0 0 var(--primary), -800px 0 0 var(--primary)
+
+    &__header
+        padding: 40px 0
+
+    &__title
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 30px
+
+    &__descriptions
+        text-transform: uppercase
+        font-weight: light
+        font-size: 16px
+
+    &__list
+        display: flex
+        overflow: hidden
+        width: 100%
+
+        @media desktop
+            padding: 0 80px
+
+    &__item
+        flex: 0 0 100%
+
+    &__name
+        padding-bottom: 30px
+        text-decoration: underline
+        font-weight: bold
+        font-size: 30px
+
+        @media mobile
+            font-size: 18px
+
+    &__text
+        font-weight: light
+        font-size: 18px
+
+        @media mobile
+            font-size: 12px

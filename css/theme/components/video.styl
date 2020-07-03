@@ -1,0 +1,28 @@
+.video-show
+    color: var(--primary)
+    text-align: center
+
+    &__container
+        margin: 0 auto
+        max-width: calc(100% - 36px)
+        width: viewport
+
+    &__header
+        padding-top: 40px
+
+    &__title
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 30px
+
+    &__descriptions
+        padding: 20px 0
+        font-weight: light
+        font-size: 18px
+
+    &__main
+        padding: 40px 0
+
+        @media mobile
+            iframe
+                height: auto !important

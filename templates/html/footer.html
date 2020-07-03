@@ -1,72 +1,29 @@
-<div class="footer__row footer__row--nav">
+
+<div class="footer__row footer__row--payments-send-social-security">
     <div class="footer__box">
-        <h3 class="footer__title">Central de <br/> Atendimento</h3>
-        <div class="footer__content">
-            <div class="footer__phone">
-                <a href="tel:11333333333">11 33333 - 3333</a>
-            </div>
-            <div class="footer__phone">
-                <a href="tel:11999999999">11 9.9999 - 9999</a>
-            </div>
-            <div class="footer__timer">
-                De segunda a sexta das 8 as 18:30 <br />
-                e sabados das 8 as 18:00
-            </div>
-            <div class="footer__email">
-                <a href="mailto:beautyshop@beautyshop.com.br">beautyshop@beautyshop.com.br</a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__box">
-        <h3 class="footer__title">As principais <br /> Categorias</h3>
+        <h3 class="footer__title">Links Úteis</h3>
         <div class="footer__content">
             {{block type="menubuilder/output" identifier="footer-categorias"}}
         </div>
     </div>
     <div class="footer__box">
-        <h3 class="footer__title">Acesse <br /> sua conta</h3>
+        <h3 class="footer__title">Links Úteis</h3>
         <div class="footer__content">
             {{block type="menubuilder/output" identifier="footer-conta"}}
         </div>
     </div>
     <div class="footer__box">
-        <h3 class="footer__title">Tire suas <br /> dúvidas</h3>
+        <h3 class="footer__title">Segurança e Certificados</h3>
         <div class="footer__content">
-            {{block type="menubuilder/output" identifier="footer-duvida"}}
+            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="securitys" seals="all"}}
         </div>
     </div>
-</div>
-
-<div class="footer__row footer__row--payments-send-social-security">
     <div class="footer__box">
         <h3 class="footer__title">
-            Formas de <br /> Pagamento
+            Forma de Pagamentos
         </h3>
         <div class="footer__content">
             {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="payments" pagtos="all"}}
         </div>
     </div>
-    <div class="footer__box">
-        <h3 class="footer__title">Formas de <br /> Envio</h3>
-        <div class="footer__content">
-            {{widget type="interface/widget_envios" template="interface/widgets/envios.phtml" identificador="sends" envios="2,4"}}
-        </div>
-    </div>
-    <div class="footer__box">
-        <h3 class="footer__title">Redes <br /> Sociais</h3>
-        <div class="footer__content">
-            {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="all"}}
-        </div>
-    </div>
-    <div class="footer__box">
-        <h3 class="footer__title">Total <br/> Segurança</h3>
-        <div class="footer__content">
-            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="securitys" seals="all"}}
-        </div>
-    </div>
-</div>
-
-<div class="footer__copyright">
-    <p>© BEAUTYSHOP 2020 BIZTHEME.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>

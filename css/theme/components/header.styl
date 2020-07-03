@@ -1,29 +1,36 @@
 .header
-    @media mobile
-        position: static
-        margin-bottom: 0 !important
-        padding: 6px 16px
+    justify-content: space-between
+    padding: 10px 0
+    transition: all 0.2s ease-in-out
 
     @media desktop
-        z-index: 20
-        padding-top: 0
-        padding-bottom: 25px
-        height: 90px
-        background: #fff
-        box-shadow: 300px 0 0 #fff, -300px 0 0 #fff
-        transition: all .2s linear
+        .mymenu
+            &, .ul--0, .li--0
+                display: contents
 
-        [data-scrolling=true] &
-            padding-bottom: 0
-            max-height: 65px
+            .li--0
+                .a--0
+                    order: 4
+
+                &:nth-child(1)
+                    .a--0
+                        order: 1
+
+                &:nth-child(2)
+                    .a--0
+                        order: 2
+
+        .logo
+            order: 3
+
+        .mycart
+            order: 5
+
+    .scrolling &
+        @media media-min-lg
+            padding: 5px 0
 
     &-container
         position: sticky
         top: 0
-        margin-bottom: 40px !important
-
-        @media mobile
-            background: #fff
-
-            .up &
-                transform: translateY(-115px)
+        background: #fff

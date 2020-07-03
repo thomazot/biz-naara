@@ -1,0 +1,70 @@
+.benefits
+    background: var(--primary)
+    box-shadow: 300px 0 0 var(--primary), -300px 0 0 var(--primary)
+    color: var(--primary-contrast)
+    text-align: center
+
+    &__container
+        margin: 0 auto
+        max-width: calc(100% - 36px)
+        width: viewport
+
+    @media desktop
+        box-shadow: 800px 0 0 var(--primary), -800px 0 0 var(--primary)
+
+    &__header
+        padding-top: 40px
+
+    &__title
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 30px
+
+    &__descriptions
+        padding: 20px 0
+        font-weight: light
+        font-size: 18px
+
+    &__strong
+        font-weight: bold
+        font-style: italic
+        font-size: 18px
+
+    &__list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-around
+
+    &__item
+        padding: 40px
+        font-weight: bold
+        font-style: italic
+        font-size: 18px
+
+    &__name
+        padding: 15px 0
+        line-height: 1.2
+
+    &__footer
+        padding: 40px 0
+
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        max-width: 100%
+        width: 290px
+        height: 70px
+        border: solid 4px var(--primary-contrast)
+        border-radius: 70px
+        background: var(--primary)
+        color: var(--primary-contrast)
+
+        &:hover
+            color: var(--primary-contrast)
+
+            @media (min-width: 992px)
+                background: var(--primary-contrast)
+                box-shadow: 0 0 0 1px var(--primary)
+                color: var(--primary)

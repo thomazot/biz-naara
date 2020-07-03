@@ -1,6 +1,13 @@
 .footer
     --footer-border-color: #f0e8ed
 
+    &
+        text-align: left
+
+    .pays
+        &__svg
+            height: 25zpx
+
     &-container
         margin-top: -16px
 
@@ -62,6 +69,10 @@
 
     &__box
         padding: 10px
+
+        &:last-child
+            @media desktop
+                flex: 0 1 250px
 
     &__phone, &__timer, &__email
         &, a

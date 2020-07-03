@@ -1,14 +1,11 @@
 .price-box
-    display: flex
-    justify-content: flex-start
-    align-items: center
-
     .old-price
         margin-bottom: 0
+        text-decoration: line-through
 
         .label, .price
             span
-                color: var(--tertiary)
+                color: var(--primary)
                 font-weight: regular
                 font-size: 14px
 
@@ -16,13 +13,15 @@
             margin-left: 5px
 
     .regular-price, .special-price, .minimal-price
-        .label, .price
-            display: inline
+        .label span
+            color: var(--primary)
+            font-weight: regular
+            font-size: 14
 
-            span
-                color: var(--tertiary)
-                font-weight: regular
-                font-size: 20px
+        .price span
+            color: var(--primary)
+            font-weight: bold
+            font-size: 24px
 
     .prod__prices &
         display: block
@@ -54,14 +53,23 @@
         .upto, .s-juros
             display: none
 
-        &, .num, .de, .value
+        &, .de
             &, span
-                color: var(--tertiary)
-                font-weight: regular
-                font-size: 14px
+                color: var(--green)
+                font-weight: bold
+                font-size: 12px
 
                 .prod__prices &
                     font-size: 15px
+
+        .num, .value
+            &, span
+                color: var(--green)
+                font-weight: bold
+                font-size: 18px
+
+                .prod__prices &
+                    font-size: 18px
 
         &:before
             content: 'ou'
@@ -73,7 +81,7 @@
         display: none
 
 .price-box-avista
-    display: block
+    display: none
 
     .label
         display: none

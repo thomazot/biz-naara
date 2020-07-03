@@ -6,7 +6,9 @@
         background: var(--primary)
 
     .input-text
-        font-size: 10px
+        height: 53px
+        border-radius: 53px
+        font-size: 14px
 
         &::placeholder
             color: var(--newsletter-color-placeholder)
@@ -24,27 +26,43 @@
         .ico
             flex: 0 0 50px
             margin-right: 20px
-            width: 50px
-            height: 29px
-            color: var(--secundary)
+            width: 63px
+            height: 40px
+            fill: currentColor
+
+        span, strong
+            line-height: 1
+
+        strong
+            display: block
+            text-transform: uppercase
 
         @media desktop
-            flex: 0 1 600px
+            flex: 0 1 465px
             margin-bottom: 0
+            text-align: left
             font-size: 16px
 
         @media mobile
             font-size: 12px
 
     &__btn
+        position: relative
+        z-index: 2
         display: flex
         justify-content: center
         align-items: center
         padding: 0
-        height: 36px
-        background: var(--secundary)
-        font-weight: medium
-        font-size: 12px
+        height: 54px
+        border-radius: 53px
+        background: var(--green)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+
+        @media desktop
+            margin-left: -50px
+            width: 145px
 
     &__submit
         @media desktop
@@ -85,7 +103,7 @@
     &__form
         @media desktop
             flex-wrap: nowrap
-            padding: 40px 0
+            padding: 20px 0
 
         @media mobile
             display: flex

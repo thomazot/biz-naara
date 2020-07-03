@@ -1,7 +1,7 @@
 .about
     margin-top: 100px
     width: 100%
-    background: var(--secundary)
+    background: var(--primary)
     color: var(--secundary-contrast)
 
     @media mobile
@@ -14,8 +14,12 @@
         align-items: center
 
     &__figure
-        flex: 0 1 250px
+        flex: 0 1 512px
         margin-top: -35px
+
+        img
+            object-fit: contain
+            object-position: center bottom
 
         @media mobile
             flex: 0 1 180px
@@ -31,6 +35,9 @@
 
         @media mobile
             order: -1
+
+        @media desktop
+            padding-left: 50px
 
     &__title
         padding-bottom: 15px
