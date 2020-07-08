@@ -63,6 +63,9 @@
                     color: var(--primary)
 
         .light
+            @media mobile
+                padding: 10px 20px
+
             a
                 border: solid 2px var(--primary)
                 color: var(--primary)
@@ -81,9 +84,16 @@
             font-size: 12px
 
     .footer &
+        .ul--0
+            max-width: 100%
+            width: 180px
+
+            @media mobile
+                width: 100%
+                text-align: center
+
         .a--0
             color: #303030
-            text-transform: uppercase
             font-weight: regular
             font-size: 12px
 

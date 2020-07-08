@@ -4,6 +4,9 @@
     &
         text-align: left
 
+        @media mobile
+            text-align: center
+
     .pays
         &__svg
             height: 25zpx
@@ -70,6 +73,9 @@
     &__box
         padding: 10px
 
+        @media mobile
+            flex: 0 0 100%
+
         &:last-child
             @media desktop
                 flex: 0 1 250px
@@ -87,3 +93,7 @@
         color: var(--tertiary)
         text-align: center
         font-size: 10px
+
+    .flex--a-center
+        @media mobile
+            justify-content: center

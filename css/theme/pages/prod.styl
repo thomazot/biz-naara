@@ -3,7 +3,8 @@
         h1
             margin-bottom: 0
             padding-bottom: 5px
-            color: var(--secundary)
+            color: var(--primary)
+            text-transform: uppercase
             font-weight: semibold
             font-size: 24px
             font-family: var(--font-primary)
@@ -12,6 +13,9 @@
     &__brand-sku
         display: flex
         margin-bottom: 20px
+
+        @media mobile
+            justify-content: center
 
         .brand
             padding-top: 0
@@ -60,6 +64,9 @@
         @media (max-width: 568px)
             display: contents
 
+        @media mobile
+            text-align: center
+
         .add-to-cart
             margin-bottom: 0
 
@@ -86,3 +93,11 @@
                 width: 10px
                 height: 15px
                 fill: var(--secundary)
+
+.product-collateral
+    @media mobile
+        text-align: center
+
+    .tabs
+        @media mobile
+            justify-content: center

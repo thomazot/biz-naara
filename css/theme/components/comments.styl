@@ -1,0 +1,47 @@
+.box-comments
+    position: relative
+    color: var(--primary)
+    text-align: center
+
+    &__container
+        margin: 0 auto
+        max-width: calc(100% - 36px)
+        width: viewport
+
+    &__header
+        padding: 45px 0
+
+    &__title
+        color: currentColor
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 30px
+
+    &__descriptions
+        text-transform: uppercase
+        font-weight: light
+        font-size: 16px
+
+    &__list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-around
+
+    &__item
+        flex: 0 1 340px
+        padding: 0 20px 40px
+
+    &__name
+        padding: 20px 0
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 18px
+
+    &__text
+        padding: 25px 0
+        font-weight: light
+        font-size: 14px
+
+    &__author
+        strong
+            display: block
